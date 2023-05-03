@@ -1,8 +1,11 @@
 name: workflow dispatch test
 on:
   workflow_dispatch:
+    inputs:
+      environment:
+      required: true
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - run: echo  "workflow dispatch test running!"
+      - run: echo  "Deploying to ${{ github.event.inputs.environment }} environment"
