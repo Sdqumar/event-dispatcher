@@ -17,4 +17,7 @@ jobs:
           yarn install
           npm install --global sanity@latest
       - name: test sanity command
-        run:  sanity dataset import https://sanitybackup1.s3.us-east-2.amazonaws.com/jmqfvlrp-production-2023-02-27.tar.gz test --allow-assets-in-different-dataset
+        run:  |
+          set -e
+          cd sanity
+          sanity dataset import https://sanitybackup1.s3.us-east-2.amazonaws.com/jmqfvlrp-production-2023-02-27.tar.gz test --allow-assets-in-different-dataset
