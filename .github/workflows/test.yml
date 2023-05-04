@@ -19,6 +19,6 @@ jobs:
         run: |
           cd sanity
           yarn install
-          yarn add @sanity/cli
+          npm install --global sanity@latest
       - name: test sanity command
-        run:  npx -y sanity@latest sanity help
+        run:  sanity help
