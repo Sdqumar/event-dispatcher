@@ -1,0 +1,25 @@
+{
+  "name": "clarity-clinic-sanity",
+  "version": "1.0.0",
+  "private": true,
+  "main": "package.json",
+  "license": "UNLICENSED",
+  "scripts": {
+    "up": "yarn install && yarn dev",
+    "dev": "sanity dev",
+    "start": "sanity start",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "deploy-graphql": "sanity graphql deploy"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "dependencies": {
+    "sanity": "^3.0.0"
+  },
+    
+  "devDependencies": {
+    "@sanity/cli": "^3.2.6"
+  }
+}
