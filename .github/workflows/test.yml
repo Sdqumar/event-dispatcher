@@ -21,4 +21,4 @@ jobs:
           yarn install
           yarn add @sanity/cli
       - name: test sanity command
-        run:  sanity help
+        run:  npx -y sanity@latest sanity help
