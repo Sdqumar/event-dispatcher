@@ -6,9 +6,7 @@ on:
       url:
         description: 'backup url'
         required: true
-      targetDataset:
-        description: 'target dataset'
-        required: true
+      
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -27,4 +25,4 @@ jobs:
         run:  |
           set -e
           cd sanity
-          SANITY_AUTH_TOKEN="${{ secrets.SANITY_TOKEN }}" sanity dataset import ${{ github.event.inputs.url }} ${{ github.event.inputs.targetDataset }} --allow-assets-in-different-dataset
+          SANITY_AUTH_TOKEN="${{ secrets.SANITY_TOKEN }}" sanity dataset import ${{ github.event.inputs.url }} test --allow-assets-in-different-dataset
